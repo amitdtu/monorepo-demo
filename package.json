@@ -1,0 +1,21 @@
+{
+  "name": "@monorepo2/root",
+  "private": true,
+  "scripts": {
+    "start": "lerna exec --scope @monorepo2/webapp -- yarn start",
+    "storybook": "lerna exec --scope @monorepo2/components -- yarn storybook",
+    "start:new": "lerna run start"
+  },
+  "devDependencies": {
+    "craco": "^0.0.3",
+    "lerna": "^4.0.0"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "dependencies": {
+    "storybook-addon-styled-component-theme": "^2.0.0"
+  }
+}
